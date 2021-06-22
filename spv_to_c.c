@@ -79,8 +79,6 @@ int main(int argc, char** argv)
 			return 1;
 		}
 
-		c = fopen(d, "w");
-
 		FILE* a = fopen(ARGUMENT, "rb");
 		if(a == NULL)
 		{
@@ -97,6 +95,8 @@ int main(int argc, char** argv)
 			fputs("error: invalid spirv (spirv bytecode is always 4-byte alligned)\n", stdout);
 			return 1;
 		}
+
+		c = fopen(d, "w");
 
 		//char* e = new char[f];
 		char* e = malloc(f);
