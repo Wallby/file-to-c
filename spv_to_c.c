@@ -101,7 +101,10 @@ int main(int argc, char** argv)
 		//char* e = new char[f];
 		char* e = malloc(f);
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-result"
 		fread((void*)e, 1, f, a);
+#pragma GCC diagnostic pop
 
 		fclose(a);
 
