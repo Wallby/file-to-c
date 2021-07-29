@@ -143,6 +143,7 @@ int main(int argc, char** argv)
 		}
 		fwrite("_H\n\n\n", 1, 5, c);
 
+		// IDEA: perhaps change this tool/make a new tool bin-to-c (i.e. which outputs an array of unsigned chars)
 		fwrite("unsigned int ", 1, 13, c);
 		for(int i = 0; i < g; ++i)
 		{
